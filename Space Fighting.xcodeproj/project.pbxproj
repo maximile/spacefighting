@@ -7,24 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		666135A320A4BAF2006FF226 /* collisionmask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 666135A120A4BAF2006FF226 /* collisionmask.cpp */; };
 		6680368C2075BBF000AA7848 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6680368B2075BBF000AA7848 /* ResourcePath.mm */; };
 		6680368F2075BBF000AA7848 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6680368E2075BBF000AA7848 /* main.cpp */; };
-		668036922075BBF000AA7848 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 668036912075BBF000AA7848 /* cute_image.jpg */; };
-		668036942075BBF000AA7848 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 668036932075BBF000AA7848 /* nice_music.ogg */; };
-		668036962075BBF000AA7848 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 668036952075BBF000AA7848 /* sansation.ttf */; };
 		668036982075BBF000AA7848 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 668036972075BBF000AA7848 /* icon.png */; };
+		66D205C42096810400F71265 /* cool.png in Resources */ = {isa = PBXBuildFile; fileRef = 66D205C32096810300F71265 /* cool.png */; };
+		66D205C720969BAF00F71265 /* screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66D205C520969BAF00F71265 /* screen.cpp */; };
+		66E2157C20F5B9B90050F2DA /* ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66E2157A20F5B9B90050F2DA /* ship.cpp */; };
+		66E2157E20F5BCCD0050F2DA /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 66E2157D20F5BCCD0050F2DA /* car.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		666135A120A4BAF2006FF226 /* collisionmask.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = collisionmask.cpp; sourceTree = "<group>"; };
+		666135A220A4BAF2006FF226 /* collisionmask.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = collisionmask.hpp; sourceTree = "<group>"; };
 		668036862075BBF000AA7848 /* Space Fighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space Fighting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6680368A2075BBF000AA7848 /* Space Fighting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Space Fighting-Info.plist"; sourceTree = "<group>"; };
 		6680368B2075BBF000AA7848 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
 		6680368D2075BBF000AA7848 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
 		6680368E2075BBF000AA7848 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		668036912075BBF000AA7848 /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
-		668036932075BBF000AA7848 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
-		668036952075BBF000AA7848 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		668036972075BBF000AA7848 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		66D205C32096810300F71265 /* cool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cool.png; sourceTree = "<group>"; };
+		66D205C520969BAF00F71265 /* screen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = screen.cpp; sourceTree = "<group>"; };
+		66D205C620969BAF00F71265 /* screen.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = screen.hpp; sourceTree = "<group>"; };
+		66E2157A20F5B9B90050F2DA /* ship.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ship.cpp; sourceTree = "<group>"; };
+		66E2157B20F5B9B90050F2DA /* ship.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ship.hpp; sourceTree = "<group>"; };
+		66E2157D20F5BCCD0050F2DA /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +67,12 @@
 				6680368B2075BBF000AA7848 /* ResourcePath.mm */,
 				6680368D2075BBF000AA7848 /* ResourcePath.hpp */,
 				6680368E2075BBF000AA7848 /* main.cpp */,
+				66D205C620969BAF00F71265 /* screen.hpp */,
+				66D205C520969BAF00F71265 /* screen.cpp */,
+				666135A220A4BAF2006FF226 /* collisionmask.hpp */,
+				666135A120A4BAF2006FF226 /* collisionmask.cpp */,
+				66E2157B20F5B9B90050F2DA /* ship.hpp */,
+				66E2157A20F5B9B90050F2DA /* ship.cpp */,
 				668036902075BBF000AA7848 /* Resources */,
 				668036892075BBF000AA7848 /* Supporting Files */,
 			);
@@ -77,9 +90,8 @@
 		668036902075BBF000AA7848 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				668036912075BBF000AA7848 /* cute_image.jpg */,
-				668036932075BBF000AA7848 /* nice_music.ogg */,
-				668036952075BBF000AA7848 /* sansation.ttf */,
+				66E2157D20F5BCCD0050F2DA /* car.png */,
+				66D205C32096810300F71265 /* cool.png */,
 				668036972075BBF000AA7848 /* icon.png */,
 			);
 			name = Resources;
@@ -112,7 +124,7 @@
 		6680367D2075BBF000AA7848 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Max Williams";
 				TargetAttributes = {
 					668036852075BBF000AA7848 = {
@@ -142,10 +154,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66E2157E20F5BCCD0050F2DA /* car.png in Resources */,
 				668036982075BBF000AA7848 /* icon.png in Resources */,
-				668036962075BBF000AA7848 /* sansation.ttf in Resources */,
-				668036942075BBF000AA7848 /* nice_music.ogg in Resources */,
-				668036922075BBF000AA7848 /* cute_image.jpg in Resources */,
+				66D205C42096810400F71265 /* cool.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6680368F2075BBF000AA7848 /* main.cpp in Sources */,
+				66D205C720969BAF00F71265 /* screen.cpp in Sources */,
+				666135A320A4BAF2006FF226 /* collisionmask.cpp in Sources */,
+				66E2157C20F5B9B90050F2DA /* ship.cpp in Sources */,
 				6680368C2075BBF000AA7848 /* ResourcePath.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,14 +197,39 @@
 		668036992075BBF000AA7848 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Library/Frameworks/,
 					"$(inherited)",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include/,
 					"$(inherited)",
@@ -200,6 +239,7 @@
 					"$(inherited)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(SFML_SYSTEM)",
@@ -227,14 +267,38 @@
 		6680369A2075BBF000AA7848 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Library/Frameworks/,
 					"$(inherited)",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include/,
 					"$(inherited)",
@@ -271,9 +335,11 @@
 		6680369C2075BBF000AA7848 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Space Fighting/Space Fighting-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "maximile.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -281,9 +347,11 @@
 		6680369D2075BBF000AA7848 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Space Fighting/Space Fighting-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "maximile.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
