@@ -8,7 +8,7 @@ Ship::Ship(sf::Image image) {
     _sprite = sf::Sprite(_texture);
     _collisionMask = CollisionMask(image);
     
-    setPos(100, 100);
+//    setPos(100, 100);
 }
 
 CollisionMask Ship::getCollisionMask() {
@@ -19,8 +19,8 @@ sf::Sprite Ship::getSprite() {
     return _sprite;
 }
 
-void Ship::setPos(int x, int y) {
-    _pos = sf::Vector2i(x, y);
+void Ship::setPos(float x, float y) {
+    _pos = sf::Vector2f(x, y);
     _sprite.setPosition(x, y);
 }
 
@@ -35,12 +35,15 @@ void Ship::releaseInputDirection(int x, int y) {
 }
 
 void Ship::step(int delta) {
-    int x = getPos().x + _inputX;
-    int y = getPos().y + _inputY;
+    _vel.x = _vel.x + (_inputX * 0.1);
+    _vel.y = _vel.y + (_inputY * 0.1);
+
+    float x = getPos().x + _vel.x;
+    float y = getPos().y + _vel.y;
     setPos(x, y);
 }
 
-sf::Vector2i Ship::getPos() {
+sf::Vector2f Ship::getPos() {
     return _pos;
 }
 

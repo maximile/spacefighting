@@ -52,6 +52,15 @@ int main(int, char const**)
     collisionTexture.loadFromFile(resourcePath() + "icon.png");
     sf::Sprite collisionSprite = sf::Sprite(collisionTexture);
     collisionSprite.setScale(0.5, 0.5);
+    collisionSprite.setPosition(100, 500);
+
+    sf::Texture testTexture;
+    testTexture.loadFromFile(resourcePath() + "blue.png");
+    std::vector<sf::Sprite> testSprites = std::vector<sf::Sprite>();
+    for (int i = 0; i < 500; i++) {
+        sf::Sprite testSprite = sf::Sprite(testTexture);
+        testSprites.push_back(testSprite);
+    }
     
     // Start the game loop
     while (window.isOpen())
@@ -111,16 +120,17 @@ int main(int, char const**)
         // Test for collision
         CollisionMask bgMask = screen.getCollisionMask();
         CollisionMask shipMask = ship.getCollisionMask();
-        std::vector<sf::Vector2u> collisions = bgMask.getCollisions(shipMask, sf::Vector2i(), ship.getPos());
-        printf("%lu\n", collisions.size());
+        std::vector<sf::Vector2u> collisions = bgMask.getCollisions(shipMask, sf::Vector2i(), sf::Vector2i(ship.getPos()));
         
         if (collisions.size() > 0) {
-            collisionSprite.setPosition(100, 500);
+            window.draw(collisionSprite);
+            for (int tsi = 0; tsi < testSprites.size(); tsi++) {
+                sf::Sprite testSprite = testSprites[tsi];
+                int colli = int(random() % (collisions.size()));
+                testSprite.setPosition(collisions[colli].x, collisions[colli].y);
+                window.draw(testSprite);
+            }
         }
-        else {
-            collisionSprite.setPosition(-500, 500);
-        }
-        window.draw(collisionSprite);
         
         window.display();
     }

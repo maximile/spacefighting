@@ -14,7 +14,7 @@ CollisionMask::CollisionMask(sf::Image image) {
         for (int x = 0; x < width; x++) {
             sf::Color sourceColor = image.getPixel(x, y);
             COLLISION_TYPE collisionType;
-            if (sourceColor.r <= 127) {
+            if (sourceColor.r <= 127 && sourceColor.a > 127) {
                 collisionType = SOLID_COLLISION;
             }
             else {

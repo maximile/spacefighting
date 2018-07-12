@@ -11,15 +11,20 @@ public:
     Ship(sf::Image image);
     CollisionMask getCollisionMask();
     sf::Sprite getSprite();
-    sf::Vector2i getPos();
-    void setPos(int x, int y);
+    sf::Vector2f getPos();
+    void setPos(float x, float y);
     void applyInputDirection(int x, int y);
     void releaseInputDirection(int x, int y);
     void step(int delta);
 private:
-    sf::Vector2i _pos;
+    sf::Vector2f _pos;
     sf::Texture _texture;
     sf::Sprite _sprite;
+    sf::Vector2f _vel;
+    
+    int _vel_x_numerator;
+    int _vel_x_denominator;
+
     CollisionMask _collisionMask;
     
     int _inputX;
