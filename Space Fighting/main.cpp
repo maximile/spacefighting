@@ -28,21 +28,6 @@ int main(int, char const**)
     bg.loadFromFile(resourcePath() + "cool.png");
     
     Screen screen(bg);
-//    screen.loadFromFile(resourcePath() + "cool.png");
-//
-//    sf::Vector2u bgsize = bg.getSize();
-//    for (int y = 0; y < bgsize.y; y++) {
-//        for (int x = 0; x < bgsize.x; x++) {
-//            sf::Color col = bg.getPixel(x, y);
-//            if (col.r < 127) {
-//                col = sf::Color(200, 100, 100);
-//            }
-//            else {
-//                col = sf::Color(100, 200, 200);
-//            }
-//            bg.setPixel(x, y, col);
-//        }
-//    }
 
     sf::Image shipImage;
     shipImage.loadFromFile(resourcePath() + "car.png");
@@ -75,9 +60,6 @@ int main(int, char const**)
             }
 
             if (event.type == sf::Event::KeyPressed) {
-                if (event.key.code == sf::Keyboard::Escape) {
-                    window.close();
-                }
                 if (event.key.code == sf::Keyboard::Left) {
                     ship.applyInputDirection(-1, 0);
                 }

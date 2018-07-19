@@ -12,8 +12,8 @@ Ship::Ship(sf::Image image) {
     _sprite = sf::Sprite(_texture);
     _collisionMask = CollisionMask(image);
     
-    _LABColor test2(sf::Color(173, 35, 35, 255));
-    std::cout << test2.getString();
+//    _LABColor test2(sf::Color(173, 35, 35, 255));
+//    std::cout << test2.getString();
 //    printf("RED %s\n", test2.getString());
     
 //    setPos(100, 100);
