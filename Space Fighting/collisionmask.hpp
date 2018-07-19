@@ -9,6 +9,7 @@ enum COLLISION_TYPE {
     SOLID_COLLISION
 };
 
+
 class CollisionMask {
 public:
     CollisionMask();
@@ -20,5 +21,6 @@ private:
     sf::Vector2u _size;
     std::vector<COLLISION_TYPE> _data;
 };
+
 
 #endif

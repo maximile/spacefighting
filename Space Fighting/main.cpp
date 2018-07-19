@@ -113,9 +113,16 @@ int main(int, char const**)
         // Clear screen
         window.clear();
 
+        sf::RenderTexture canvasTexture;
+        sf::Vector2u windowSize = window.getSize();
+        assert(windowSize.x % 2 == 0);
+        assert(windowSize.y % 2 == 0);
+        canvasTexture.create(window.getSize().x / 2, window.getSize().y / 2);
+        canvasTexture.setSmooth(false);
+        
         // Draw the sprite
-        window.draw(screen.getBackgroundSprite());
-        window.draw(ship.getSprite());
+        canvasTexture.draw(screen.getBackgroundSprite());
+        canvasTexture.draw(ship.getSprite());
 
         // Test for collision
         CollisionMask bgMask = screen.getCollisionMask();
@@ -123,15 +130,19 @@ int main(int, char const**)
         std::vector<sf::Vector2u> collisions = bgMask.getCollisions(shipMask, sf::Vector2i(), sf::Vector2i(ship.getPos()));
         
         if (collisions.size() > 0) {
-            window.draw(collisionSprite);
+            canvasTexture.draw(collisionSprite);
             for (int tsi = 0; tsi < testSprites.size(); tsi++) {
                 sf::Sprite testSprite = testSprites[tsi];
                 int colli = int(random() % (collisions.size()));
                 testSprite.setPosition(collisions[colli].x, collisions[colli].y);
-                window.draw(testSprite);
+                canvasTexture.draw(testSprite);
             }
         }
         
+        canvasTexture.display();
+        sf::Sprite canvasSprite = sf::Sprite(canvasTexture.getTexture());
+        canvasSprite.setScale(2.0, 2.0);
+        window.draw(canvasSprite);
         window.display();
     }
 

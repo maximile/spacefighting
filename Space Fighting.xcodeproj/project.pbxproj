@@ -11,6 +11,8 @@
 		6680368C2075BBF000AA7848 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6680368B2075BBF000AA7848 /* ResourcePath.mm */; };
 		6680368F2075BBF000AA7848 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6680368E2075BBF000AA7848 /* main.cpp */; };
 		668036982075BBF000AA7848 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 668036972075BBF000AA7848 /* icon.png */; };
+		6690FC4520FEEB1A00B24A52 /* imageprocess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6690FC4320FEEB1A00B24A52 /* imageprocess.cpp */; };
+		6690FC4820FEEBF900B24A52 /* color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6690FC4620FEEBF900B24A52 /* color.cpp */; };
 		669732D220F6E2DC00EC05DD /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 669732D120F6E2DB00EC05DD /* blue.png */; };
 		66D205C42096810400F71265 /* cool.png in Resources */ = {isa = PBXBuildFile; fileRef = 66D205C32096810300F71265 /* cool.png */; };
 		66D205C720969BAF00F71265 /* screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66D205C520969BAF00F71265 /* screen.cpp */; };
@@ -27,6 +29,10 @@
 		6680368D2075BBF000AA7848 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
 		6680368E2075BBF000AA7848 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		668036972075BBF000AA7848 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		6690FC4320FEEB1A00B24A52 /* imageprocess.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = imageprocess.cpp; sourceTree = "<group>"; };
+		6690FC4420FEEB1A00B24A52 /* imageprocess.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = imageprocess.hpp; sourceTree = "<group>"; };
+		6690FC4620FEEBF900B24A52 /* color.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = color.cpp; sourceTree = "<group>"; };
+		6690FC4720FEEBF900B24A52 /* color.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = color.hpp; sourceTree = "<group>"; };
 		669732D120F6E2DB00EC05DD /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		66D205C32096810300F71265 /* cool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cool.png; sourceTree = "<group>"; };
 		66D205C520969BAF00F71265 /* screen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = screen.cpp; sourceTree = "<group>"; };
@@ -50,8 +56,8 @@
 		6680367C2075BBF000AA7848 = {
 			isa = PBXGroup;
 			children = (
-				668036882075BBF000AA7848 /* Space Fighting */,
 				668036872075BBF000AA7848 /* Products */,
+				668036882075BBF000AA7848 /* Space Fighting */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,16 +72,20 @@
 		668036882075BBF000AA7848 /* Space Fighting */ = {
 			isa = PBXGroup;
 			children = (
-				6680368B2075BBF000AA7848 /* ResourcePath.mm */,
-				6680368D2075BBF000AA7848 /* ResourcePath.hpp */,
-				6680368E2075BBF000AA7848 /* main.cpp */,
-				66D205C620969BAF00F71265 /* screen.hpp */,
-				66D205C520969BAF00F71265 /* screen.cpp */,
-				666135A220A4BAF2006FF226 /* collisionmask.hpp */,
 				666135A120A4BAF2006FF226 /* collisionmask.cpp */,
-				66E2157B20F5B9B90050F2DA /* ship.hpp */,
-				66E2157A20F5B9B90050F2DA /* ship.cpp */,
+				666135A220A4BAF2006FF226 /* collisionmask.hpp */,
+				6690FC4620FEEBF900B24A52 /* color.cpp */,
+				6690FC4720FEEBF900B24A52 /* color.hpp */,
+				6690FC4320FEEB1A00B24A52 /* imageprocess.cpp */,
+				6690FC4420FEEB1A00B24A52 /* imageprocess.hpp */,
+				6680368E2075BBF000AA7848 /* main.cpp */,
+				6680368D2075BBF000AA7848 /* ResourcePath.hpp */,
+				6680368B2075BBF000AA7848 /* ResourcePath.mm */,
 				668036902075BBF000AA7848 /* Resources */,
+				66D205C520969BAF00F71265 /* screen.cpp */,
+				66D205C620969BAF00F71265 /* screen.hpp */,
+				66E2157A20F5B9B90050F2DA /* ship.cpp */,
+				66E2157B20F5B9B90050F2DA /* ship.hpp */,
 				668036892075BBF000AA7848 /* Supporting Files */,
 			);
 			path = "Space Fighting";
@@ -191,7 +201,9 @@
 				66D205C720969BAF00F71265 /* screen.cpp in Sources */,
 				666135A320A4BAF2006FF226 /* collisionmask.cpp in Sources */,
 				66E2157C20F5B9B90050F2DA /* ship.cpp in Sources */,
+				6690FC4820FEEBF900B24A52 /* color.cpp in Sources */,
 				6680368C2075BBF000AA7848 /* ResourcePath.mm in Sources */,
+				6690FC4520FEEB1A00B24A52 /* imageprocess.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
