@@ -28,11 +28,11 @@ COLOR_NAME ColorNames::getNameFromColor(sf::Color color) {
 
 
 sf::Color ColorNames::getColorFromName(COLOR_NAME name) {
-    return _getReferenceColors()[name];
+    return getReferenceColors()[name];
 }
 
 
-std::map<COLOR_NAME, sf::Color> ColorNames::_getReferenceColors() {
+std::map<COLOR_NAME, sf::Color> ColorNames::getReferenceColors() {
     static std::map<COLOR_NAME, sf::Color> _referenceColors;
     
     if (_referenceColors.size() > 0) {
@@ -61,7 +61,7 @@ std::map<COLOR_NAME, hsvValues> ColorNames::_getReferenceHsvValues() {
         return _referenceValues;
     }
     
-    std::map<COLOR_NAME, sf::Color> sfmlCols = _getReferenceColors();
+    std::map<COLOR_NAME, sf::Color> sfmlCols = getReferenceColors();
     for (std::map<COLOR_NAME, sf::Color>::iterator iter = sfmlCols.begin(); iter != sfmlCols.end(); iter++) {
         if (iter->first == TRANSPARENT) {
             continue;

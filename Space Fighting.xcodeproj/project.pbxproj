@@ -14,6 +14,7 @@
 		6690FC4520FEEB1A00B24A52 /* imageprocess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6690FC4320FEEB1A00B24A52 /* imageprocess.cpp */; };
 		6690FC4820FEEBF900B24A52 /* color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6690FC4620FEEBF900B24A52 /* color.cpp */; };
 		6690FC4A21004DB100B24A52 /* testcols.png in Resources */ = {isa = PBXBuildFile; fileRef = 6690FC4921004DB000B24A52 /* testcols.png */; };
+		6690FC4C2109708600B24A52 /* biglevel.png in Resources */ = {isa = PBXBuildFile; fileRef = 6690FC4B2109708600B24A52 /* biglevel.png */; };
 		669732D220F6E2DC00EC05DD /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 669732D120F6E2DB00EC05DD /* blue.png */; };
 		66D205C42096810400F71265 /* cool.png in Resources */ = {isa = PBXBuildFile; fileRef = 66D205C32096810300F71265 /* cool.png */; };
 		66D205C720969BAF00F71265 /* screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66D205C520969BAF00F71265 /* screen.cpp */; };
@@ -35,6 +36,7 @@
 		6690FC4620FEEBF900B24A52 /* color.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = color.cpp; sourceTree = "<group>"; };
 		6690FC4720FEEBF900B24A52 /* color.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = color.hpp; sourceTree = "<group>"; };
 		6690FC4921004DB000B24A52 /* testcols.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testcols.png; sourceTree = "<group>"; };
+		6690FC4B2109708600B24A52 /* biglevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = biglevel.png; sourceTree = "<group>"; };
 		669732D120F6E2DB00EC05DD /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		66D205C32096810300F71265 /* cool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cool.png; sourceTree = "<group>"; };
 		66D205C520969BAF00F71265 /* screen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = screen.cpp; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		668036902075BBF000AA7848 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6690FC4B2109708600B24A52 /* biglevel.png */,
 				6690FC4921004DB000B24A52 /* testcols.png */,
 				669732D120F6E2DB00EC05DD /* blue.png */,
 				66E2157D20F5BCCD0050F2DA /* car.png */,
@@ -173,6 +176,7 @@
 				66E2157E20F5BCCD0050F2DA /* car.png in Resources */,
 				6690FC4A21004DB100B24A52 /* testcols.png in Resources */,
 				668036982075BBF000AA7848 /* icon.png in Resources */,
+				6690FC4C2109708600B24A52 /* biglevel.png in Resources */,
 				66D205C42096810400F71265 /* cool.png in Resources */,
 				669732D220F6E2DC00EC05DD /* blue.png in Resources */,
 			);

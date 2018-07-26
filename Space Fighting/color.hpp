@@ -29,8 +29,8 @@ class ColorNames {
 public:
     static COLOR_NAME getNameFromColor(sf::Color color);
     static sf::Color getColorFromName(COLOR_NAME name);
+    static std::map<COLOR_NAME, sf::Color> getReferenceColors();
 private:
-    static std::map<COLOR_NAME, sf::Color> _getReferenceColors();
     static std::map<COLOR_NAME, hsvValues> _getReferenceHsvValues();
     static hsvValues colorToHsvValues(sf::Color inCol);
 };

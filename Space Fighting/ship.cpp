@@ -7,17 +7,29 @@ Ship::Ship() {
 }
 
 Ship::Ship(sf::Image image) {
-    sf::Image processedImage = ImageProcess::toReferenceColors(image);
+    std::map<COLOR_NAME, COLOR_NAME> colMap;
+    colMap[BLACK] = BLACK;
+    colMap[GREEN] = BLACK;
+    sf::Image processedImage = ImageProcess::convert(image, colMap);
+    
+//    sf::Image processedImage = ImageProcess::toReferenceColors(image);
     _texture.loadFromImage(processedImage);
     _sprite = sf::Sprite(_texture);
-    _collisionMask = CollisionMask(image);
+    _landed = false;
     
-//    _LABColor test2(sf::Color(173, 35, 35, 255));
-//    std::cout << test2.getString();
-//    printf("RED %s\n", test2.getString());
-    
-//    setPos(100, 100);
+    std::map<COLOR_NAME, int> colorCollisionMap;
+    colorCollisionMap[YELLOW] = LANDING_POINT_COLLISION;
+    colorCollisionMap[BLACK] = SOLID_COLLISION;
+    colorCollisionMap[GREEN] = SOLID_COLLISION;
+
+    _collisionMask = CollisionMask(image, colorCollisionMap);
+    _landingPixelCount = _collisionMask.count(LANDING_POINT_COLLISION);
 }
+
+int Ship::getRequiredLandingCollisionCount() {
+    return _landingPixelCount;
+}
+
 
 CollisionMask Ship::getCollisionMask() {
     return _collisionMask;
@@ -25,6 +37,11 @@ CollisionMask Ship::getCollisionMask() {
 
 sf::Sprite Ship::getSprite() {
     return _sprite;
+}
+
+void Ship::land() {
+    _vel.x = _vel.y = 0;
+    _landed = true;
 }
 
 void Ship::setPos(float x, float y) {
@@ -35,6 +52,10 @@ void Ship::setPos(float x, float y) {
 void Ship::applyInputDirection(int x, int y) {
     if (x != 0) _inputX = x;
     if (y != 0) _inputY = y;
+    if (y < 0) {
+        _landed = false;
+        _pos.y -= 1;
+    }
 }
 
 void Ship::releaseInputDirection(int x, int y) {
@@ -43,6 +64,9 @@ void Ship::releaseInputDirection(int x, int y) {
 }
 
 void Ship::step(int delta) {
+    if (_landed) {
+        return;
+    }
     _vel.x = _vel.x + (_inputX * 0.03);
     _vel.y = _vel.y + (_inputY * 0.05);
     _vel.y = _vel.y + 0.01;

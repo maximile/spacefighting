@@ -25,7 +25,7 @@ int main(int, char const**)
     window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
     sf::Image bg;
-    bg.loadFromFile(resourcePath() + "cool.png");
+    bg.loadFromFile(resourcePath() + "biglevel.png");
     
     Screen screen(bg);
 
@@ -37,7 +37,7 @@ int main(int, char const**)
     collisionTexture.loadFromFile(resourcePath() + "icon.png");
     sf::Sprite collisionSprite = sf::Sprite(collisionTexture);
     collisionSprite.setScale(0.5, 0.5);
-    collisionSprite.setPosition(100, 500);
+    collisionSprite.setPosition(100, 200);
 
     sf::Texture testTexture;
     testTexture.loadFromFile(resourcePath() + "blue.png");
@@ -103,27 +103,35 @@ int main(int, char const**)
         canvasTexture.setSmooth(false);
         
         // Draw the sprite
+        sf::Vector2f viewSize(window.getSize().x / 2.0, window.getSize().y / 2.0);
+        sf::View view(ship.getPos(), viewSize);
+        canvasTexture.setView(view);
         canvasTexture.draw(screen.getBackgroundSprite());
         canvasTexture.draw(ship.getSprite());
 
         // Test for collision
         CollisionMask bgMask = screen.getCollisionMask();
         CollisionMask shipMask = ship.getCollisionMask();
-        std::vector<sf::Vector2u> collisions = bgMask.getCollisions(shipMask, sf::Vector2i(), sf::Vector2i(ship.getPos()));
+        std::vector<sf::Vector2u> collisions = bgMask.getCollisions(shipMask, sf::Vector2i(), sf::Vector2i(ship.getPos()), SOLID_COLLISION, SOLID_COLLISION);
         
         if (collisions.size() > 0) {
-            canvasTexture.draw(collisionSprite);
-            for (int tsi = 0; tsi < testSprites.size(); tsi++) {
-                sf::Sprite testSprite = testSprites[tsi];
-                int colli = int(random() % (collisions.size()));
-                testSprite.setPosition(collisions[colli].x, collisions[colli].y);
-                canvasTexture.draw(testSprite);
-            }
+            ship.setPos(20, 20);
         }
+        
+        // Test for landing
+        std::vector<sf::Vector2u> landingCollisions = bgMask.getCollisions(shipMask, sf::Vector2i(), sf::Vector2i(ship.getPos()), SOLID_COLLISION, LANDING_POINT_COLLISION);
+        
+        if (landingCollisions.size() >= ship.getRequiredLandingCollisionCount()) {
+            ship.land();
+        }
+
         
         canvasTexture.display();
         sf::Sprite canvasSprite = sf::Sprite(canvasTexture.getTexture());
         canvasSprite.setScale(2.0, 2.0);
+//        float xOffset = 0.0 - ship.getPos().x;
+//        float yOffset = 0.0 - ship.getPos().y;
+//        canvasSprite.setPosition(xOffset, yOffset);
         window.draw(canvasSprite);
         window.display();
     }
